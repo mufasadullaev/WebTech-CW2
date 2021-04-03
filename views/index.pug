@@ -1,0 +1,28 @@
+extends layout.pug
+
+block content
+    .container
+        .intro
+            h1.home-title Rookie - Your favourite image gallery
+            a.create-btn(href='/create') Create Note 
+        .card-gallery 
+            .card-img 
+                img(src="/static/images/img-1.jpg" alt="")
+                .info
+                    h4 ImageTitle
+                    p ImageDescription
+            .card-img 
+                img(src="/static/images/img-2.jpg" alt="")
+                .info
+                    h4 ImageTitle
+                    p ImageDescription
+            .card-img 
+                img(src="/static/images/img-3.jpg" alt="")
+                .info
+                    h4 ImageTitle
+                    p ImageDescription
+            .card-img 
+                img(src="/static/images/img-4.jpg" alt="")
+                .info
+                    h4 ImageTitle
+                    p ImageDescription

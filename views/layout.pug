@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+    head
+        title Notes App
+        link(rel='stylesheet' href='/static/styles/style.css')
+
+    body
+        header.navbar 
+            h1
+                a(href='/')
+                    img.header-logo(src="/static/images/logo-rookie.png" alt="")
+                    h4 Rookie
+            
+            nav.nav     
+                a.navlink(href='/notes') All Images 
+                a.navlink(href='/archive') Archive
+                
+        block content
+                
+                     
