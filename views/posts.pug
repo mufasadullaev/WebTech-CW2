@@ -6,5 +6,5 @@ block content
 
         each post in posts
             .post-wrapper 
-                a.post(href='#')= post
-                a.delete(href='#') delete
+                a.post(href=`/posts/${ post.id }`) #{ post.imgtitle }
+                a.delete(href=`/${ post.id }/delete`) delete
