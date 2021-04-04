@@ -46,14 +46,42 @@ app.post('/create', (req, res) =>{
     }
 })
 
-const posts = ['Image-1', 'Image-2']
-
 app.get('/posts', (req, res) => {
-    res.render('posts', {posts: posts})
+    fs.readFile('./data/posts.json', (err, data) =>{
+        if (err) throw err
+        
+        const posts = JSON.parse(data)
+
+        res.render('posts', {posts: posts})
+    })
 })
 
-app.get('/posts/details', (req, res) => {
-    res.render('details')
+app.get('/posts/:id', (req, res) => {
+    const id = req.params.id
+
+    fs.readFile('./data/posts.json', (err, data) =>{
+        if (err) throw err
+        
+        const posts = JSON.parse(data)
+        const post = posts.filter(post => post.id == id) [0]
+
+        res.render('details', { post: post})
+    })
+})
+
+app.get('/:id/delete', (req, res) =>{
+    const id = req.params.id
+    
+    fs.readFile('./data/posts.json', (err, data) => {
+        if (err) throw err
+        const posts = JSON.parse(data)
+        const filteredPosts = posts.filter(post => post.id != id)
+
+        fs.writeFile('./data/posts.json', JSON.stringify(filteredPosts), (err) => {
+            if (err) throw err
+            res.render('posts', {posts: filteredPosts, delete: true})
+        })
+    })
 })
 
 app.listen(8000, err => {
