@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+    .container
+        h1.pageTitle Create Post
+        
+        form.form(action="/create" method="POST")
+            label Your Image 
+            input.input(type="file" name="imginput")
+            
+            label Image Title
+            input.input(type="text" name="imgtitle")
+            label Description 
+            textarea.input(type="text" name="imgdescription")
+
+            button.btn Create
