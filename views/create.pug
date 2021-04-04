@@ -6,7 +6,7 @@ block content
         
         form.form(action="/create" method="POST")
             label Your Image 
-            input.input(type="file" name="imginput")
+            input.input(type="file" name="imginput" accept="image/png, image/jpeg, image/jpg")
             
             label Image Title
             input.input(type="text" name="imgtitle")
@@ -14,3 +14,9 @@ block content
             textarea.input(type="text" name="imgdescription")
 
             button.btn Create
+
+        if error
+            p.error Something went wrong!
+
+        if success 
+            p.success Note is created!
