@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block content 
+    h1.pageTitle All Posts
+    .container
+
+        each post in posts
+            .post-wrapper 
+                a.post(href='#')= post
+                a.delete(href='#') delete
