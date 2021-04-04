@@ -3,5 +3,6 @@ extends layout.pug
 block content 
     .container 
         h1.imgtitle #{ post.imgtitle }
+        img(src="#{post.imginput}", alt="")
         p.imgdescription #{ post.imgdescription }
         
