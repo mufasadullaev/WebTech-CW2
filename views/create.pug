@@ -1,8 +1,8 @@
 extends layout.pug
 
 block content
-    div.container
-        h1 Create New Post
+    .container
+        h1.pageTitle Create Post
         
         form.form(action="/create" method="POST")
             label Your Image 
@@ -13,4 +13,4 @@ block content
             label Description 
             textarea.input(type="text" name="imgdescription")
 
-            button.btn Create Post
+            button.btn Create

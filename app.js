@@ -13,6 +13,12 @@ app.get('/create', (req, res) => {
     res.render('create')
 })
 
+const posts = ['Image-1', 'Image-2']
+
+app.get('/posts', (req, res) => {
+    res.render('posts', {posts: posts})
+})
+
 app.listen(8000, err => {
     if (err) console.log(err)
 

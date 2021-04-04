@@ -6,14 +6,14 @@
 }
 
 body{
-    background-color: rgb(252, 241, 241);
     width: 100%;
-    max-width: 1230px;
+    max-width: 1250px;
     padding: 0 15px;
     margin: 0 auto;
 }
 
 .navbar{
+    border-bottom: 0.8px solid rgb(226, 225, 225);
     margin: 20px 0;
     display: flex;
     justify-content: space-between;
@@ -64,7 +64,8 @@ body{
     margin: 0;
     text-align: center;
 }
-.home-title{
+.pageTitle{
+    text-align: center;
     font-size: 36px;
     font-weight: 400;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -114,4 +115,63 @@ body{
 }
 .card-img:hover .info{
     opacity: 1;
+}
+
+/* CREATE PAGE */
+
+.form{
+margin: 30px 0;
+ max-width: 60%;
+}
+
+.input{
+width: 100%;
+display: block;
+padding: 10px;
+font-size: 20px;
+font-family: inherit;
+border: 1px solid #ccc;
+margin-bottom: 20px;
+}
+.form label{
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn{
+    padding: 8px 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(62, 112, 204);
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+.btn:hover{
+    background-color: rgb(32, 80, 168);
+}
+
+/* All Posts */
+.container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+.post-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+}
+.delete{
+    width: 100%;
+    display: inline-block;
+    max-width: 80px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 30px;
+    text-transform: capitalize;
+    background-color: rgb(207, 6, 6);
+    color: #fff;
 }
