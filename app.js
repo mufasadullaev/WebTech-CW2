@@ -17,7 +17,6 @@ app.get('/create', (req, res) => {
     res.render('create')
 })
 app.post('/create', (req, res) =>{
-    const imginput = req.body.imginput
     const imgtitle = req.body.imgtitle
     const imgdescription = req.body.imgdescription
 
@@ -32,7 +31,6 @@ app.post('/create', (req, res) =>{
 
             posts.push({
                 id: id(),
-                imginput: imginput,
                 imgtitle: imgtitle,
                 imgdescription: imgdescription,
             })
@@ -81,6 +79,16 @@ app.get('/:id/delete', (req, res) =>{
             if (err) throw err
             res.render('posts', {posts: filteredPosts, delete: true})
         })
+    })
+})
+
+app.get('/api/v1/posts', (req, res) => {
+    fs.readFile('./data/posts.json', (err, data) =>{
+        if (err) throw err
+        
+        const posts = JSON.parse(data)
+
+        res.json(posts)
     })
 })
 
