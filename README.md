@@ -34,3 +34,6 @@ localhost:8000
 
 ### WebApp GitHub repository
 https://github.com/mufasadullaev/WebTech-CW2
+
+### Glitch Link
+https://bejewled-intermediate-mars.glitch.me/
