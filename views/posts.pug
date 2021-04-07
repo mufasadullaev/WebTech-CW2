@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 extends layout.pug 
 
 block content 
@@ -8,15 +7,4 @@ block content
         each post in posts
             .post-wrapper 
                 a.post(href=`/posts/${ post.id }`) #{ post.imgtitle }
-=======
-extends layout.pug 
-
-block content 
-    h1.pageTitle All Posts
-    .container
-
-        each post in posts
-            .post-wrapper 
-                a.post(href=`/posts/${ post.id }`) #{ post.imgtitle }
->>>>>>> 9543049b6a274ef062107ca4fd09a387db6d8a47
                 a.delete(href=`/${ post.id }/delete`) delete
