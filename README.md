@@ -36,4 +36,4 @@ localhost:8000
 https://github.com/mufasadullaev/WebTech-CW2
 
 ### Glitch Link
-https://bejewled-intermediate-mars.glitch.me/
+https://mercurial-pool-croissant.glitch.me
